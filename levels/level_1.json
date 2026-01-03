@@ -1,0 +1,71 @@
+{
+  "total_distance": 10000,
+  "metadata": {
+    "scroll_speed_multiplier": 1.0,
+    "boss_sprite": "res://assets/sprites/boss.png",
+    "boss_config": {
+      "health": 10,
+      "scale": 1.5,
+      "attacks": [0],
+      "attack_cooldown": 2.0,
+      "projectile_sprite": "res://assets/sprites/projectile-enemy.png"
+    }
+  },
+  "enemy_config": {
+    "zigzag_speed_min": 100,
+    "zigzag_speed_max": 140,
+    "zigzag_angle_min": 30,
+    "zigzag_angle_max": 70
+  },
+  "sections": [
+    {
+      "name": "Opening",
+      "start_percent": 0,
+      "end_percent": 20,
+      "obstacle_density": "low",
+      "enemy_waves": [
+        { "enemy_type": "stationary", "count": 2 }
+      ]
+    },
+    {
+      "name": "Building",
+      "start_percent": 20,
+      "end_percent": 40,
+      "obstacle_density": "medium",
+      "enemy_waves": [
+        { "enemy_type": "stationary", "count": 3 },
+        { "enemy_type": "patrol", "count": 1 }
+      ]
+    },
+    {
+      "name": "Ramping",
+      "start_percent": 40,
+      "end_percent": 60,
+      "obstacle_density": "medium",
+      "enemy_waves": [
+        { "enemy_type": "patrol", "count": 2 },
+        { "enemy_type": "shooting", "count": 1 }
+      ]
+    },
+    {
+      "name": "Intense",
+      "start_percent": 60,
+      "end_percent": 80,
+      "obstacle_density": "high",
+      "enemy_waves": [
+        { "enemy_type": "patrol", "count": 3 },
+        { "enemy_type": "shooting", "count": 2 }
+      ]
+    },
+    {
+      "name": "Final Push",
+      "start_percent": 80,
+      "end_percent": 100,
+      "obstacle_density": "high",
+      "enemy_waves": [
+        { "enemy_type": "charger", "count": 2 },
+        { "enemy_type": "patrol", "count": 2 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://placeholder"]
+
+[node name="Main" type="Node2D"]
+
+[node name="WelcomeLabel" type="Label" parent="."]
+offset_left = 724.0
+offset_top = 668.0
+offset_right = 1324.0
+offset_bottom = 768.0
+theme_override_font_sizes/font_size = 48
+text = "Let's build a game!
+
+Open Claude Code and say:
+\"Let's make a game!\""
+horizontal_alignment = 1
+vertical_alignment = 1
